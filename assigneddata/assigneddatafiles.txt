@@ -1,0 +1,25 @@
+This is an information file explaining what each assigned data file contains and (if available) when the data collection started:
+Feel free to update this file as more information is collected
+1. actual_and_predicted_births.csv:
+    File combining: official and modelled birth estimates. Data for English local authority districts, regions, and ITL 2 subregions.
+    From: 01/07/1991
+2. plots.zip
+    Zip file containing: Selected plots of actual and predicted recent births for English local authorities, regions, and ITL 2 subregions. Plots are labelled by their geographic code - a csv lookup of codes and names is included in the zip file.
+3. birth_gp_ratios.csv
+    File containing: past birth estimates, modelled counts of patients age 0, actual and modelled ratios of births to patient counts. Data for English local authorities, regions, and ITL2 subregions.
+    From: 01/01/2015
+4. gp_sya_lad.csv
+    File Containing: Modelled counts of patients registered at a GP practice by single year of age, sex, and 2021 local authority of residence by date of extract
+    From: 01/10/2014
+5. gp_sya_lad.rds
+    File Containing: Modelled counts of patients registered at a GP practice by single year of age, sex, and 2021 local authority of residence by date of extract. This file is saved in the RDS format native to the R programming language and is intended for use as an input to: https://github.com/Greater-London-Authority/nowcast-birth-estimates
+    From: 01/10/2014
+6. gp_sya_itl.csv
+    File Containing: Modelled counts of patients registered at a GP practice by single year of age, sex, and ITL 2 subregion of residence by date of extract
+    From: 01/10/2014
+7. gp_sya_rgn.csv
+    File Containing: Modelled counts of patients registered at a GP practice by single year of age, sex, and region of residence by date of extract
+    From: 01/10/2014
+8. gp_sya_ctry.csv
+    File Containing: Modelled counts of patients registered at a GP practice by single year of age, sex, and resident in England by date of extract
+    From: 01/10/2014
