@@ -434,9 +434,14 @@ df_rgn.rename(columns={'gss_name': 'Region'}, inplace=True)
 df_itl.rename(columns={'gss_name': 'ITL 2'}, inplace=True)
 df_lad.rename(columns={'gss_name': 'LAD'}, inplace=True)
 
-#Create output files
-df_ctry.to_csv('C:/Users/kajan/OneDrive/Desktop/UCL 3RD YEAR/COMP0035/COURSEWORK 1 code/comp0035-cwg-group10/assigneddata/output_file_ctry.csv', index=False)
-df_rgn.to_csv('C:/Users/kajan/OneDrive/Desktop/UCL 3RD YEAR/COMP0035/COURSEWORK 1 code/comp0035-cwg-group10/assigneddata/output_file_rgn.csv', index=False)
-df_itl.to_csv('C:/Users/kajan/OneDrive/Desktop/UCL 3RD YEAR/COMP0035/COURSEWORK 1 code/comp0035-cwg-group10/assigneddata/output_file_itl.csv', index=False)
-df_lad.to_csv('C:/Users/kajan/OneDrive/Desktop/UCL 3RD YEAR/COMP0035/COURSEWORK 1 code/comp0035-cwg-group10/assigneddata/output_file_lad.csv', index=False)
-print("Geocoding and CSV update complete.")
+#create output files
+output_ctry = current_directory.parent.parent / "assigneddata" / "prepared_ctry.csv"
+output_rgn = current_directory.parent.parent / "assigneddata" / "prepared_rgn.csv"
+output_itl = current_directory.parent.parent / "assigneddata" / "prepared_itl.csv"
+output_lad = current_directory.parent.parent / "assigneddata" / "prepared_lad.csv"
+
+df_ctry.to_csv(output_ctry, index=False)
+df_rgn.to_csv(output_rgn, index=False)
+df_itl.to_csv(output_itl, index=False)
+df_lad.to_csv(output_lad, index=False)
+print("Geocoding and CSV update complete.")
