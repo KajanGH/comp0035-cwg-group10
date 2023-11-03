@@ -1,13 +1,19 @@
+from pathlib import Path
 import pandas as pd
 
 #FILE IMPORT SECTION-------------------------------
 #imports all files that need to be prepped
 
-df_ctry = pd.read_csv('C:/Users/kajan/OneDrive/Desktop/UCL 3RD YEAR/COMP0035/COURSEWORK 1 code/comp0035-cwg-group10/assigneddata/gp_sya_ctry.csv')
-df_rgn = pd.read_csv('C:/Users/kajan/OneDrive/Desktop/UCL 3RD YEAR/COMP0035/COURSEWORK 1 code/comp0035-cwg-group10/assigneddata/gp_sya_rgn.csv')
-df_itl = pd.read_csv('C:/Users/kajan/OneDrive/Desktop/UCL 3RD YEAR/COMP0035/COURSEWORK 1 code/comp0035-cwg-group10/assigneddata/gp_sya_itl.csv')
-df_lad = pd.read_csv('C:/Users/kajan/OneDrive/Desktop/UCL 3RD YEAR/COMP0035/COURSEWORK 1 code/comp0035-cwg-group10/assigneddata/gp_sya_lad.csv')
+current_directory = Path(_file_).resolve().parent
+ctry = current_directory.parent.parent / "assigneddata" / "gp_sya_ctry.csv"
+rgn = current_directory.parent.parent / "assigneddata" / "gp_sya_rgn.csv"
+itl = current_directory.parent.parent / "assigneddata" / "gp_sya_itl.csv"
+lad = current_directory.parent.parent / "assigneddata" / "gp_sya_lad.csv"
 
+df_ctry = pd.read_csv(ctry)
+df_rgn = pd.read_csv(rgn)
+df_itl = pd.read_csv(itl)
+df_lad = pd.read_csv(lad)
 #DICTIONARY SECTION-------------------------------
 
 #Region dictionary for the itl file
