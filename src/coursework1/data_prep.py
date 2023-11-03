@@ -1772,7 +1772,7 @@ longlat = {
         "Latitude": 51.95686495,
         "Longitude": -0.223050908
     },
-    "St. Albans": {
+    "St Albans": {
         "Latitude": 51.753051,
         "Longitude": -0.3379675
     },
@@ -1920,7 +1920,7 @@ longlat = {
         "Latitude": 51.5080169,
         "Longitude": 0.39628174
     },
-    "Uttleford": {
+    "Uttlesford": {
         "Latitude": 51.19195,
         "Longitude": -0.68283
     },
@@ -2016,7 +2016,7 @@ longlat = {
         "Latitude": 51.3713049,
         "Longitude": -0.101957
     },
-    "Kingston Upon Thames": {
+    "Kingston upon Thames": {
         "Latitude": 51.4096275,
         "Longitude": -0.3062621
     },
@@ -2024,7 +2024,7 @@ longlat = {
         "Latitude": 51.41086985,
         "Longitude": -0.188097089
     },
-    "Richmond Upon Thames": {
+    "Richmond upon Thames": {
         "Latitude": 51.4405529,
         "Longitude": -0.307639438
     },
@@ -2384,7 +2384,7 @@ longlat = {
         "Latitude": 51.1251275,
         "Longitude": 1.3134228
     },
-    "Folkestone & Hythe": {
+    "Folkestone and Hythe": {
         "Latitude": 51.05774845,
         "Longitude": 1.00607207
     },
@@ -2592,7 +2592,7 @@ longlat = {
         "Latitude": 51.35632375,
         "Longitude": -2.486661425
     },
-    "Bristol": {
+    "Bristol, City of": {
         "Latitude": 51.4538022,
         "Longitude": -2.5972985
     },
@@ -2640,7 +2640,7 @@ longlat = {
         "Latitude": 52.3390519,
         "Longitude": -2.053201799
     },
-    "Herefordshire": {
+    "Herefordshire, County of": {
         "Latitude": 52.083333,
         "Longitude": -2.75
     },
