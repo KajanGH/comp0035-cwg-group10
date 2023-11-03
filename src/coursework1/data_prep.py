@@ -4,7 +4,7 @@ import pandas as pd
 #FILE IMPORT SECTION-------------------------------
 #imports all files that need to be prepped
 
-current_directory = Path(_file_).resolve().parent
+current_directory = Path(__file__).resolve().parent
 ctry = current_directory.parent.parent / "assigneddata" / "gp_sya_ctry.csv"
 rgn = current_directory.parent.parent / "assigneddata" / "gp_sya_rgn.csv"
 itl = current_directory.parent.parent / "assigneddata" / "gp_sya_itl.csv"
