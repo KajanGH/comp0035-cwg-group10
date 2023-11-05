@@ -3020,6 +3020,54 @@ df_rgn.drop(columns=columns_to_remove, inplace=True)
 df_itl.drop(columns=columns_to_remove, inplace=True)
 df_lad.drop(columns=columns_to_remove, inplace=True)
 
+#remove rows containting unwanted dates from all files 
+
+dates_to_keep = [
+    "2014-10-01",
+    "2015-01-01",
+    "2015-04-01",
+    "2015-07-01",
+    "2015-10-01",
+    "2016-01-01",
+    "2016-04-01",
+    "2016-07-01",
+    "2016-10-01",
+    "2017-01-01",
+    "2017-04-01",
+    "2017-07-01",
+    "2017-10-01",
+    "2018-01-01",
+    "2018-04-01",
+    "2018-07-01",
+    "2018-10-01",
+    "2019-01-01",
+    "2019-04-01",
+    "2019-07-01",
+    "2019-10-01",
+    "2020-01-01",
+    "2020-04-01",
+    "2020-07-01",
+    "2020-10-01",
+    "2021-01-01",
+    "2021-04-01",
+    "2021-07-01",
+    "2021-10-01",
+    "2022-01-01",
+    "2022-04-01",
+    "2022-07-01",
+    "2022-10-01",
+    "2023-01-01",
+    "2023-04-01",
+    "2023-07-01",
+    "2023-10-01"
+]
+
+df_ctry = df_ctry[df_ctry['extract_date'].isin(dates_to_keep)]
+df_rgn = df_rgn[df_rgn['extract_date'].isin(dates_to_keep)]
+df_itl = df_itl[df_itl['extract_date'].isin(dates_to_keep)]
+df_lad = df_lad[df_lad['extract_date'].isin(dates_to_keep)]
+
+
 # datetime format
 df_ctry["extract_date"] = pd.to_datetime(df_ctry["extract_date"], format="%Y-%m-%d")
 df_rgn["extract_date"] = pd.to_datetime(df_rgn["extract_date"], format="%Y-%m-%d")
@@ -3127,7 +3175,9 @@ print(df_itl.info(verbose=True))
 print("LAD - Column labels and data types")
 print(df_lad.info(verbose=True))
 
-#DOUBLE CHECKS - ensures that despite the extract_date data format being datetime64[ns], the data is of the form YYYY-MM-DD, since we dont care about hrs, mins, secs etc. 
+#DOUBLE CHECKS - ensures that despite the extract_date data format being datetime64[ns], 
+# the data is of the form YYYY-MM-DD, since we dont care about hrs, mins, secs etc.
+# only quaterly dates are present 
 print(df_ctry[['extract_date']].to_string(index=False))
 
 
