@@ -3114,6 +3114,22 @@ df_lad = df_lad[
     ]
 ]
 
+#DOUBLE CHECKS - ensures all columns that are expected are present and of the correct data type
+print("CTRY - Column labels and data types")
+print(df_ctry.info(verbose=True))
+
+print("RGN - Column labels and data types")
+print(df_rgn.info(verbose=True))
+
+print("ITL - Column labels and data types")
+print(df_itl.info(verbose=True))
+
+print("LAD - Column labels and data types")
+print(df_lad.info(verbose=True))
+
+#DOUBLE CHECKS - ensures that despite the extract_date data format being datetime64[ns], the data is of the form YYYY-MM-DD, since we dont care about hrs, mins, secs etc. 
+print(df_ctry[['extract_date']].to_string(index=False))
+
 
 # Rename gss_name to appropriate name for each file
 df_ctry.rename(columns={"gss_name": "Country"}, inplace=True)
