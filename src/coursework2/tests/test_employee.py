@@ -1,28 +1,42 @@
-# This file is deliberately badly written and does not conform to good practice for test case naming standards
 import pytest
+from your_module import RestAPI  # Import the RestAPI class from your module
 
-from src.coursework2.employee import Employee
+# Test to retrieve all LAD data from the REST API
+def test_get_all_lad_data():
+    rest_api = RestAPI()  # Initialise the RestAPI instance
+    lad_data = rest_api.retrieve_all_lad_data()
+    assert len(lad_data) > 0  # Check if LAD data is retrieved successfully
 
+# Test to retrieve specific LAD data from the REST API
+def test_get_specific_lad_data():
+    rest_api = RestAPI()  # Initialise the RestAPI instance
+    country = "England"
+    region = "London"
+    extract_date = "2023-01-01"
+    specific_lad_data = rest_api.retrieve_specific_lad_data(country, region, extract_date)
+    assert specific_lad_data is not None  # Check if specific LAD data is retrieved successfully
 
-def testemp1():
-    e = Employee(name="A N Other", title="Manager", employee_id="12345", salary=45000)
-    assert e.department == "HR"
+# Test to add new LAD data to the REST API
+def test_add_new_lad_data():
+    rest_api = RestAPI()  # Initialise the RestAPI instance
+    new_lad_data = {...}  # Define your sample LAD data
+    response = rest_api.add_new_lad_data(new_lad_data)
+    assert response == "Success"  # Assuming the response is expected to be "Success"
 
+# Test to update existing LAD data in the REST API
+def test_update_existing_lad_data():
+    rest_api = RestAPI()  # Initialise the RestAPI instance
+    updated_lad_data = {...}  # Define your sample updated LAD data
+    response = rest_api.update_existing_lad_data(updated_lad_data)
+    assert response == "Updated"  # Assuming the response is expected to be "Updated"
 
-def testemp2():
-    e = Employee(name="A N Other", title="Manager", employee_id="12345", salary=45000)
-    result = e.calculate_monthly_salary(hours_worked=155)
-    assert result == 3875
+def test_delete_specific_lad_data():
+    rest_api = RestAPI()  # Initialise the RestAPI instance
+    country = "England"
+    region = "London"
+    extract_date = "2023-01-01"
+    response = rest_api.delete_specific_lad_data(country, region, extract_date)
+    assert response == "Deleted"  # Assuming the response is expected to be "Deleted"
 
-
-def testemp3():
-    e = Employee(name="A N Other", title="Manager", employee_id="12345", salary=45000)
-    e.salary = 9000
-    assert e.salary == 9000
-
-
-def testemp4():
-    e = Employee(name="A N Other", title="Manager", employee_id="12345", salary=45000)
-    e.salary = 19575.67
-    assert e.salary == 19575.67
+#USED Chatgpt AI for the creation of the tests using the 3.1 template. Then edited the tests so it is correct and makes sense for our project. 
 
