@@ -48,7 +48,9 @@ def test_employee_zero_hours_worked_monthly_salary():
 
 def test_employee_overtime_calculation():
     e = Employee(name="A N Other", title="Manager", employee_id="12345", salary=45000)
+    # Calculating overtime for 160 hours (above the regular 150 hours)
+    expected_salary = e.salary / 12 + ((160 - 150) * ((e.salary / 12) / 150))  # Calculate expected salary
     monthly_salary = e.calculate_monthly_salary(160)
-    assert monthly_salary == pytest.approx(4750, rel=1e-2)
+    assert monthly_salary == pytest.approx(expected_salary, rel=1e-2)
 
 #Chatgpt was used to generate the four new tests but we chose what test to implement best for our case.
